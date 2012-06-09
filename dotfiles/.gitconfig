@@ -1,0 +1,29 @@
+[user]
+    email = james.p.turk@gmail.com
+    name = James Turk
+[github]
+    user = jamesturk
+[core]
+    excludesfile = ~/.gitignore
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
+[push]
+    default = tracking
+#[branch "master"]
+#    remote = origin
+#    merge = refs/heads/master
+[alias]
+    graph = log --oneline --decorate --graph --branches
+    wdiff = diff --word-diff
+    switch = !legit switch \"$@\"
+    branches = !legit branches
+    sprout = !legit sprout \"$@\"
+    unpublish = !legit unpublish \"$@\"
+    harvest = !legit harvest \"$@\"
+    sync = !legit sync \"$@\"
+    publish = !legit publish \"$@\"
+    graft = !legit graft \"$@\"
