@@ -45,12 +45,12 @@ myStartupHook = composeAll [
     ]
 
 
-myWorkspaces = ["1", "2", "3:im", "4", "5", "6", "7", "8:float", "9"]
+myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8:float", "9"]
 
 myManageHook = composeAll
    [ resource =? "Do"       --> doIgnore,            -- Ignore GnomeDo
-     resource =? "Pidgin"   --> doShift "3:im",      -- Shift Pidgin to im desktop
-     className =? "empathy"  --> doShift "3:im",     -- Shift Empathy to im desktop
+    -- resource =? "Pidgin"   --> doShift "3:im",      -- Shift Pidgin to im desktop
+    -- className =? "empathy"  --> doShift "3:im",     -- Shift Empathy to im desktop
      resource =? "gimp"     --> doShift "8:float",   -- gimp on floating
      resource =? "gimp-2.6" --> doShift "8:float",   -- gimp on floating
      manageDocks,
@@ -71,7 +71,7 @@ keysToAdd x = [ -- Gnome close window
 myKeys x = M.union (keys gnomeConfig x) (M.fromList (keysToAdd x))
 
 myLayout = avoidStruts $
-    onWorkspace "3:im" imLayout $
+--    onWorkspace "3:im" imLayout $
     onWorkspace "8:float" simpleFloat $
     layoutHook gnomeConfig
     where

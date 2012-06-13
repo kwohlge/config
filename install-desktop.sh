@@ -30,8 +30,10 @@ sudo apt-get install \
 cabal update
 cabal unpack DBus
 cd Dbus-0.4
-vim DBus/Internal.hsc  # replace Exception with OldException
-vim DBus/Message.hsc   # prepend Foreign. to unsafePerformIO
+# replace Exception with OldException
+sed -i s/Exception/OldException/ DBus/Internal.hsc
+# prepend Foreign. to unsafePerformIO
+sed -i s/unsafePerformIO/Foreign.unsafePerformIO/ DBus/Message.hsc
 cabal configure
 cabal build
 sudo cabal install
