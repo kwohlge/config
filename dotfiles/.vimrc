@@ -64,3 +64,12 @@ function! TrimSpace()
   ''
 :endfunction
 command! -bar -nargs=0 TrimSpace call TrimSpace()
+
+""" translation stuff from https://github.com/rory/django-template-i18n-lint/
+" select some text in visual mode, then call the e macro on it (e.g. press
+" @e), and it'll wrap that text in {% blocktrans %}/{% endblocktrans %}
+let @e = "`>a{% endblocktrans %}gv`<i{% blocktrans %}"
+
+" select some text in visual mode, then call the w macro on it (e.g. press
+" @w), and it'll wrap that text in {% trans '' %}
+let @w = "`>a' %}gv`<i{% trans 'l"

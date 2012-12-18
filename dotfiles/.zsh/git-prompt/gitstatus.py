@@ -9,6 +9,7 @@ symbols = {'ahead of': '↑', 'behind': '↓', 'prehash':':'}
 from subprocess import Popen, PIPE
 
 import sys
+
 gitsym = Popen(['git', 'symbolic-ref', 'HEAD'], stdout=PIPE, stderr=PIPE)
 branch, error = gitsym.communicate()
 

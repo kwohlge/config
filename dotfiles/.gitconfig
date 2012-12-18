@@ -17,6 +17,7 @@
 #    remote = origin
 #    merge = refs/heads/master
 [alias]
+    co = checkout
     graph = log --oneline --decorate --graph --branches
     wdiff = diff --word-diff
     switch = !legit switch \"$@\"

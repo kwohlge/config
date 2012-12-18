@@ -9,7 +9,7 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
-setopt share_history
+#setopt share_history
 # set terminal title
 precmd () {print -Pn "\e]0;%n@%m: %d\a"}
 
@@ -28,6 +28,8 @@ bindkey "^[[1;5D" backward-word
 
 # autocompletion
 zstyle :compinstall filename '/home/james/.zshrc'
+
+compdef mosh=ssh
 
 # processes
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
@@ -69,3 +71,4 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_REQUIRE_VIRTUALENV=true
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GDK_NATIVE_WINDOWS=true
+export GOPATH=/home/james/code/mygo/

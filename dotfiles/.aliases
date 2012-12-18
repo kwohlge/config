@@ -17,6 +17,7 @@ alias quickweb='python -m SimpleHTTPServer'
 alias py='ipython --no-banner --no-confirm-exit -i'
 alias ack='ack-grep'
 alias open='gnome-open'
+alias :e='vim'
 
 # git stuff
 #alias git='hub'
