@@ -27,18 +27,7 @@ set listchars=tab:».,trail:\
 set virtualedit=block     " allow editing in virtual space in block mode
 set directory=~/.vimtmp   " keep all tempfiles in same dir
 " work with X11 clipboard(?)
-
-""" my edits
-if has ('unnamedplus')
-  set clipboard=unnamedplus
-else
-	set clipboard=unnamed
-endif
-
-""" powershell 
-set shell=powershell
-set shellcmdflag=-command
-
+set clipboard=unnamedplus
 set colorcolumn=80
 
 """ color scheme
